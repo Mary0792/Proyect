@@ -22,10 +22,10 @@ const config = {
   
   // Configuración de CORS
   cors: {
-    origin: process.env.NODE_ENV === 'production' 
-      ? ['https://tu-dominio.com'] 
-      : ['http://localhost:3000', 'http://localhost:3001'],
-    credentials: true
+    origin: '*',
+    credentials: false,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
   }
 };
 
